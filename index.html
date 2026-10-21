@@ -7,10 +7,12 @@
     <title>Document</title> <!-- update later -->
 
     <!-- #region  LINKS  -->
-    <link rel="stylesheeet" href="./css/fonts.css">
-    <link rel="stylesheeet" href="./css/general.css">
-    <link rel="stylesheeet" href="./css/variables.css">
-    <link rel="stylesheeet" href="./style.css">
+
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/media-querries.css">
 
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
@@ -26,8 +28,8 @@
 
     <!-- #region__________  HEADER  __________-->
     <header>
-        <img src="./assets/icons/" alt="logo"> <!-- update later -->
-        <img src="./assets/img/" alt="schriftzug"> <!-- update later -->
+        <img id="idHeaderLogoIcon" class="LogoIcon" src="./assets/icons/" alt="logo"> <!-- update later -->
+        <img id="idHeaderLogo" class="LogoHeader" src="./assets/img/" alt="schriftzug"> <!-- update later -->
 
     </header>
 
@@ -35,32 +37,70 @@
     <!-- ------------------------------------------------------------- -->
 
     <!-- #region__________  MAIN   __________-->
-    <h1 id="idHeading" class="WebsiteHeading">My favorite Paintings by Pierromaniac</h1>
-    <section id="idThumbnailWrapper" class="ThumbnailWrapper">
+    <main>
+        <h1 id="idHeading" class="WebsiteHeading">My favorite Paintings by Pierromaniac</h1>
+        <section id="idThumbnailWrapper" class="ThumbnailWrapper">
 
-        <!-- #region__________  DIALOG __________-->
+            <!-- probe design -->
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail">BILD</button>
 
-        <dialog id="idLightBox" class="LightBox">
+            <!-- #region__________  DIALOG __________-->
 
-        </dialog>
+            <dialog id="idLightBox" class="LightBox">
 
-        <!-- #endregion -->
+                <section class="DialogHeader">
+                    <title>Img title of Array index</title>
+                    <button id="idCloseButton" class="CloseButton" type="button">
+                        <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/">
+                    </button>
+                </section>
 
+                <figure>
+                    <img id="idFullsizeImage" class="ImageFullSize" src="./assets/img/"> <!-- src innerhtml variable -->
+                </figure>
 
-    </section>
+                <section id="idDisplayNavigationWrapper" class="DisplayNavigationWrapper">
+                    <button id="idButtonToPreviousImage" class="NavigationButton">
+                        <img id="idArrowPointingLeft" class="arrow left" src="./assets/icons/" alt="<">
+                        <!-- update later -->
+                    </button>
+                    <p id="idIndexOfDisplayedImage" class="NavigationDisplay">1/12</p> <!-- created by js -->
+                    <button id="idButtonToNextImage" class="NavigationButton">
+                        <img id="idArrowPointingRight" class="arrow right" src="./assets/icons/" alt="<">
+                        <!-- update later -->
+                    </button>
+                </section>
 
+            </dialog>
+            <!-- #endregion DIALOG-->
+        </section>
 
+    </main>
     <!-- #endregion -->
+
     <!-- ------------------------------------------------------------- -->
+
     <!-- #region__________  FOOTER  __________-->
     <footer>
-        <img src="./assets/img/" alt="schriftzug"> <!-- update later -->
+        <img id="idFooterLogo" class="LogoFooter" src="./assets/img/" alt="schriftzug"> <!-- update later -->
         <section id="idCopyrightWrapper" class="CopyrightWrapper">
-            <img src="./assets/icons/" alt="logo"> <!-- update later -->
-            <p>2026 SplashCore by Pierromaniac</p>
+            <img id="idCopyrightIcon" class="CopyrightIcon" src="./assets/icons/" alt="Copyright Icon">
+            <!-- update later -->
+            <p id="idCopyrightText" class="TextCopyright">2026 SplashCore by Pierromaniac</p>
         </section>
     </footer>
-
 
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->

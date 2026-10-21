@@ -5,7 +5,7 @@
 
 
 /* #region   CONST  */
-
+const LIGHT_BOX_REF = document.getElementById("idLightBox");
 
 
 /* #endregion */
@@ -21,7 +21,13 @@
 
 
 /* #region   FUNCTIONS  */
+function openDialog() {
+    LIGHT_BOX_REF.showModal();
+}
 
+function closeDialog() {
+    LIGHT_BOX_REF.close();
+}
 
 
 /* #endregion */

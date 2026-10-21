@@ -159,6 +159,91 @@
 
     /* ============================================================== */
 
+    /* #region__________ MODAL LIGHTBOX __________*/
+    /* .LightBox { */
+    dialog {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 55%;
+        height: 66%;
+        gap: 50px;
+
+        padding: 60px;
+
+        background-color: rgb(22, 13, 0);
+
+    }
+
+    /* propertys of Mainpage header active */
+    /* .DialogHeader { */
+    dialog header {
+        display: flex;
+        justify-content: space-between;
+        height: 77px;
+        background-color: rgb(56, 38, 21);
+    }
+
+    /* .TitleOfImage { */
+    dialog h2 {
+        color: rgb(175, 149, 111);
+        font-size: 2.2rem;
+        font-family: var(--primary-font);
+    }
+
+    /* .FullSizeImageArea { */
+    dialog figure {
+        display: flex;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 60px;
+        background-color: beige;
+
+    }
+
+    /* .ImageFullSize { */
+    dialog img {
+        width: 100%;
+        background-color: rgba(160, 139, 94, 0.555);
+        ;
+    }
+
+    /* .DisplayNavigationWrapper { */
+    dialog section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 260px;
+        height: 60px;
+        background-color: rgb(56, 38, 21);
+    }
+
+    /* .NavigationButton { */
+    dialog section button {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    /* propertys of Mainpage ptag active */
+    /* .NavigationDisplay { */
+    dialog p {
+        font-size: 1rem;
+        font-family: var(--primary-font);
+        color: rgb(175, 149, 111);
+    }
+
+
+
+
+    /* #endregion */
+    /* ------------------------------------------------------------- */
     /* #region     */
 
 

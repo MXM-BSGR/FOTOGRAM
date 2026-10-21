@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <!-- update later -->
 
+    <!-- #region  SCRIPT  -->
+    <script defer src="./js/templates.js"></script>
+    <script defer src="script.js"></script>
+
+    <!-- #endregion -->
+    <!-- ------------------------------------------------------------- -->
     <!-- #region  LINKS  -->
 
     <link rel="stylesheet" href="./css/fonts.css">
@@ -13,12 +19,6 @@
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./css/media-querries.css">
-
-    <!-- #endregion -->
-    <!-- ------------------------------------------------------------- -->
-    <!-- #region  SCRIPT  -->
-    <script defer src="./js/templates.js"></script>
-    <script defer src="script.js"></script>
 
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
@@ -42,6 +42,7 @@
         <section id="idThumbnailWrapper" class="ThumbnailWrapper">
 
             <!-- probe design -->
+            <button id="idThumbnailOne" type="button" class="Thumbnail" onclick="openDialog()">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
@@ -52,22 +53,21 @@
             <button type="button" class="Thumbnail">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
-            <button type="button" class="Thumbnail">BILD</button>
-            <button type="button" class="Thumbnail">BILD</button>
+            <button type="button" class="Thumbnail" onclick="openDialog()">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
 
             <!-- #region__________  DIALOG __________-->
 
             <dialog id="idLightBox" class="LightBox">
 
-                <section class="DialogHeader">
-                    <title>Img title of Array index</title>
-                    <button id="idCloseButton" class="CloseButton" type="button">
-                        <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/">
+                <header class="DialogHeader">
+                    <h2 class="TitleOfImage">Img title of Array index</h2>
+                    <button id="idCloseButton" class="CloseButton" type="button" onclick="closeDialog()">
+                        <!-- <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/"> -->
                     </button>
-                </section>
+                </header>
 
-                <figure>
+                <figure id="idFullSizeImageArea" class="FullSizeImageArea">
                     <img id="idFullsizeImage" class="ImageFullSize" src="./assets/img/"> <!-- src innerhtml variable -->
                 </figure>
 

@@ -160,10 +160,20 @@
     /* ============================================================== */
 
     /* #region__________ MODAL LIGHTBOX __________*/
-    /* .LightBox { */
-    dialog {
 
+    .LightBoxWrapper {
+        pointer-events: none;
+    }
+
+    .LightBox {
+        /* dialog { */
+        all: unset;
         display: flex;
+        position: fixed;
+        inset: 0;
+        margin: auto;
+
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -179,23 +189,31 @@
     }
 
     /* propertys of Mainpage header active */
-    /* .DialogHeader { */
-    dialog header {
+    .DialogHeader {
+        /* dialog header { */
         display: flex;
         justify-content: space-between;
         height: 77px;
         background-color: rgb(56, 38, 21);
     }
 
-    /* .TitleOfImage { */
-    dialog h2 {
+    .TitleOfImage {
+        /* dialog h2 { */
         color: rgb(175, 149, 111);
         font-size: 2.2rem;
         font-family: var(--primary-font);
     }
 
-    /* .FullSizeImageArea { */
-    dialog figure {
+    .CloseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .FullSizeImageArea {
+        /* dialog figure { */
         display: flex;
 
         width: 100%;
@@ -206,15 +224,15 @@
 
     }
 
-    /* .ImageFullSize { */
-    dialog img {
+    .ImageFullSize {
+        /* dialog img { */
         width: 100%;
         background-color: rgba(160, 139, 94, 0.555);
         ;
     }
 
-    /* .DisplayNavigationWrapper { */
-    dialog section {
+    .DisplayNavigationWrapper {
+        /* dialog section { */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -223,17 +241,27 @@
         background-color: rgb(56, 38, 21);
     }
 
-    /* .NavigationButton { */
-    dialog section button {
-
+    .NavigationButton {
+        /* dialog section button { */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 60px;
         height: 60px;
         border-radius: 50%;
     }
 
+    .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
     /* propertys of Mainpage ptag active */
-    /* .NavigationDisplay { */
-    dialog p {
+    .NavigationDisplay {
+        /* dialog p { */
         font-size: 1rem;
         font-family: var(--primary-font);
         color: rgb(175, 149, 111);

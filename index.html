@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <!-- update later -->
 
-    <!-- #region  SCRIPT  -->
-    <script defer src="./js/templates.js"></script>
-    <script defer src="script.js"></script>
-
-    <!-- #endregion -->
-    <!-- ------------------------------------------------------------- -->
     <!-- #region  LINKS  -->
 
     <link rel="stylesheet" href="./css/fonts.css">
@@ -19,6 +13,12 @@
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./css/media-querries.css">
+
+    <!-- #endregion -->
+    <!-- ------------------------------------------------------------- -->
+    <!-- #region  SCRIPT  -->
+    <script defer src="./js/templates.js"></script>
+    <script defer src="./script.js"></script>
 
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
@@ -55,36 +55,40 @@
             <button type="button" class="Thumbnail">BILD</button>
             <button type="button" class="Thumbnail" onclick="openDialog()">BILD</button>
             <button type="button" class="Thumbnail">BILD</button>
+        </section>
+        <article id="idLightBoxWrapper" class="LightBoxWrapper">
 
-            <!-- #region__________  DIALOG __________-->
+        </article>
 
-            <dialog id="idLightBox" class="LightBox">
+        <!-- #region__________  DIALOG __________-->
 
-                <header class="DialogHeader">
-                    <h2 class="TitleOfImage">Img title of Array index</h2>
-                    <button id="idCloseButton" class="CloseButton" type="button" onclick="closeDialog()">
-                        <!-- <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/"> -->
-                    </button>
-                </header>
+        <!-- <dialog id="idLightBox" class="LightBox"> -->
 
-                <figure id="idFullSizeImageArea" class="FullSizeImageArea">
-                    <img id="idFullsizeImage" class="ImageFullSize" src="./assets/img/"> <!-- src innerhtml variable -->
-                </figure>
+        <!-- <header class="DialogHeader"> -->
+        <!-- <h2 class="TitleOfImage">Img title of Array index</h2> -->
+        <!-- <button id="idCloseButton" class="CloseButton" type="button" onclick="closeDialog()"> -->
+        <!-- <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/close.svg"> -->
+        <!-- </button> -->
+        <!-- </header> -->
 
-                <section id="idDisplayNavigationWrapper" class="DisplayNavigationWrapper">
-                    <button id="idButtonToPreviousImage" class="NavigationButton">
-                        <img id="idArrowPointingLeft" class="arrow left" src="./assets/icons/" alt="<">
-                        <!-- update later -->
-                    </button>
-                    <p id="idIndexOfDisplayedImage" class="NavigationDisplay">1/12</p> <!-- created by js -->
-                    <button id="idButtonToNextImage" class="NavigationButton">
-                        <img id="idArrowPointingRight" class="arrow right" src="./assets/icons/" alt="<">
-                        <!-- update later -->
-                    </button>
-                </section>
+        <!-- <figure id="idFullSizeImageArea" class="FullSizeImageArea"> -->
+        <!-- <img id="idFullsizeImage" class="ImageFullSize" src="./assets/img/"> src innerhtml variable -->
+        <!-- </figure> -->
 
-            </dialog>
-            <!-- #endregion DIALOG-->
+        <!-- <section id="idDisplayNavigationWrapper" class="DisplayNavigationWrapper"> -->
+        <!-- <button id="idButtonToPreviousImage" class="NavigationButton"> -->
+        <!-- <img id="idArrowPointingLeft" class="arrow left" src="./assets/icons/" alt="<"> -->
+        <!-- update later -->
+        <!-- </button> -->
+        <!-- <p id="idIndexOfDisplayedImage" class="NavigationDisplay">1/12</p> created by js -->
+        <!-- <button id="idButtonToNextImage" class="NavigationButton"> -->
+        <!-- <img id="idArrowPointingRight" class="arrow right" src="./assets/icons/" alt="<"> -->
+        <!-- update later -->
+        <!-- </button> -->
+        <!-- </section> -->
+
+        <!-- </dialog> -->
+        <!-- #endregion DIALOG-->
         </section>
 
     </main>

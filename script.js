@@ -5,43 +5,73 @@
 
 
 /* #region   CONST  */
-const LIGHT_BOX_REF = document.getElementById("idLightBoxWrapper");
-
+const LIGHT_BOX_WRAPPER_REF = document.getElementById("idLightBoxWrapper");
+const LIGHT_BOX_REF = document.getElementById("idLightBox");
+const THUMBNAIL_WRAPPER_REF = document.getElementById("idThumbnailWrapper");
 
 /* #endregion */
 /* ------------------------------------------------------------- */
 
 
 /* #region   VARIABLES  */
-let imageNameList = ["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12"];
-let imageAltText = ["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12"];
+let imageNameList = ["pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg",];
+let imageAltText = ["pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg", "pic.jpg",];
 
-let currentImageAltText = "";
+let currentPosition = ""; /* `${currentPosition}` */
+let currentImageTitle = ""; /* `${currentImageTitle}` */
+let currentImageAltText = ""; /* `${currentImageAltText}` */
 
 /* #endregion */
 /* ------------------------------------------------------------- */
+
+/* #region   FUNCTIONS  */
+
+/* #region   GENERAL FUNCTIONS  */
+function init() {
+    renderGallery();
+}
 
 function getAltText(index) {
     currentImageAltText = imageAltText[index];
     return currentImageAltText;
 }
 
-function renderModal() {
-    LIGHT_BOX_REF.innerHTML = "";
-    for (let index = 0; index < imageNameList.length; index++) {
-        let currentPosition = `${index + 1}/${imageNameList.length}`
-        let currentImageTitle = imageNameList[index]; /* `${currentImageTitle}` */
-        currentImageAltText = getAltText(index);
-
-        LIGHT_BOX_REF.innerHTML = getModalTemplate(currentImageTitle, currentImageAltText, currentPosition);
-
-    }
-
+function transformNumberToWord(index) {
+    let numberWords = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"];
+    return numberWords[index];
 }
 
-/* #region   FUNCTIONS  */
-function openDialog() {
-    renderModal();
+// function checkImageList(array) {
+//     return array.length;
+// }
+
+/* #endregion */
+/* ------------------------------------------------------------- */
+
+
+/* #region__________   THUMBNAIL GALLERY    __________ */
+
+function renderGallery() {
+    for (let index = 0; index < imageNameList.length; index++) {
+        currentPosition = `${index + 1}/${imageNameList.length}`
+        currentImageTitle = imageNameList[index]; /* `${currentImageTitle}` */
+        currentImageAltText = getAltText(index);
+        renderThumbnail(index);
+    }
+}
+
+function renderThumbnail(index) {
+    THUMBNAIL_WRAPPER_REF.innerHTML += getThumbnailTemplate(index, transformNumberToWord(index));
+}
+
+/* #endregion */
+/* ------------------------------------------------------------- */
+
+
+/* #region_________     LIGHTBOX   __________  */
+
+function openDialog(index) {
+    renderModal(index);
     LIGHT_BOX_REF.showModal();
 }
 
@@ -49,40 +79,29 @@ function closeDialog() {
     LIGHT_BOX_REF.close();
 }
 
-
-/* #endregion */
-/* ------------------------------------------------------------- */
-
-
-/* #region   TEMPLATE FUNCTIONS  */
-
-function getModalTemplate(title, altText, position) {
-    return `<dialog id="idLightBox" class="LightBox">
-                <header class="DialogHeader">
-                    <h2 class="TitleOfImage">${title}</h2>
-                    <button id="idCloseButton" class="CloseButton" type="button" onclick="closeDialog()">
-                        <img id="idDisplayCloseButtonIcon" class="CloseButtonIcon" src="./assets/icons/close.svg">
-                    </button>
-                </header>
-
-                <figure id="idFullSizeImageArea" class="FullSizeImageArea">
-                    <img id="idFullsizeImage" class="ImageFullSize" src="./assets/${title}.jpg/" alt="${altText}">
-                </figure>
-
-                <section id="idDisplayNavigationWrapper" class="DisplayNavigationWrapper">
-                    <button id="idButtonToPreviousImage" class="NavigationButton">
-                        <img id="idArrowPointingLeft" class="arrow left" src="./assets/icons/arrow-pointing-left.svg" alt="arrow-pointing-left">
-                    </button>
-                    <p id="idIndexOfDisplayedImage" class="NavigationDisplay">${position}</p> 
-                    <button id="idButtonToNextImage" class="NavigationButton">
-                        <img id="idArrowPointingRight" class="arrow right" src="./assets/icons/arrow-pointing-right.svg" alt="arrow-pointing-right">
-
-                    </button>
-                </section>
-            </dialog>`
+function renderModal(indexOfThumbnail) {
+    /* `${fullSizePainting}` */
+    let fullSizePainting = imageNameList[indexOfThumbnail];
+    /* `${thumbnailPosition}` */
+    let thumbnailPosition = `${indexOfThumbnail + 1}/${imageNameList.length}`;
+    /* `${fullSizeImageAltText}` */
+    let fullSizeImageAltText = getAltText(indexOfThumbnail);
+    LIGHT_BOX_REF.innerHTML = "";
+    LIGHT_BOX_REF.innerHTML = getModalTemplate(fullSizePainting, fullSizeImageAltText, thumbnailPosition, transformNumberToWord(indexOfThumbnail), indexOfThumbnail);
 }
 
-
+function showNextModal(modalNumber) {
+    if (modalNumber > imageNameList.length - 1) {
+        closeDialog();
+        openDialog(0);
+    } else if (modalNumber < 0) {
+        closeDialog();
+        openDialog(imageNameList.length - 1);
+    } else {
+        closeDialog();
+        openDialog(modalNumber);
+    }
+}
 
 /* #endregion */
 /* ------------------------------------------------------------- */
@@ -91,12 +110,12 @@ function getModalTemplate(title, altText, position) {
 
 
 
+// /* #region  */
+
+
+
+/* #endregion */
+/* ------------------------------------------------------------- */
 
 /* ============================================================== */
 
-/* #region     */
-
-
-
-/* #endregion */
-/* ------------------------------------------------------------- */

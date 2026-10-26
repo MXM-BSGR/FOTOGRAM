@@ -7,6 +7,7 @@
         --primary-color: black;
         --color-ink-black: rgb(20, 19, 18);
         --color-parchment: rgb(229, 217, 195);
+        --color-sepia-transparent: rgba(158, 128, 91, 0.4);
         --color-sepia: rgb(158, 128, 91);
         --color-bone: rgb(199, 189, 168);
         --color-prussian-blue: rgb(59, 91, 117);
@@ -15,6 +16,7 @@
         --color-rust-red: rgb(125, 46, 43);
         --color-flesh-pink: rgb(212, 157, 148);
         --color-moss-green: rgb(110, 122, 74);
+        --color-dialog-bg: rgb(17, 7, 0);
 
         /* #endregion */
         /* ------------------------------------------------------------- */

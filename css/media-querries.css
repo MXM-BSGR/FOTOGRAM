@@ -11,4 +11,128 @@
     .MainFooter {
         max-width: 1440px;
     }
+
+    .LightBoxContent {
+        background-size: 1440px 820px;
+    }
+
+    .ImageFullSize {
+        height: 490px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1224px) {
+    h1 {
+        font-size: clamp(2.5rem, calc(1.929rem + 1.19vw), 3rem);
+        text-align: center;
+    }
+
+    main {
+        padding-inline: clamp(60px, calc(-41.1px + 13.16vw), 120px);
+    }
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .CloseButton {
+
+        top: -40px;
+        right: -40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .MainHeader {
+        padding-inline: 0;
+        width: 100vw;
+    }
+
+    .MainHeader {
+        padding-inline: 0;
+        background-size: 100% 100px;
+    }
+
+    .LogoHeader {
+        width: 180px;
+        height: 45px
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, calc(0.784rem + 3.58vw), 2.5rem);
+        text-align: center;
+    }
+
+    main {
+        padding-inline: clamp(10px, calc(-68.7px + 24.61vw), 120px);
+    }
+
+
+    /* #region DIALOG */
+    .TitleOfImage {
+        font-size: clamp(1.5rem, calc(0.999rem + 2.51vw), 2.2rem);
+    }
+
+    .NavigationDisplay {
+        font-size: clamp(1.25rem, calc(1.071rem + 0.89vw), 1.5rem);
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .ThumbnailWrapper {
+        border: none;
+        padding: 0;
+        background-color: unset;
+        box-shadow: none;
+    }
+
+    .ThumbnailButton {
+        /* border: 7px solid rgba(59, 91, 117, 0.7); */
+        outline: 6px solid rgba(59, 91, 117, 0.7);
+        ;
+        /* box-shadow: 0 0 33px 11px white; */
+    }
+
+    .ThumbnailButton:hover {
+
+        box-shadow: 0 0 33px 11px white;
+    }
+
+    .ThumbnailButton:focus {
+        outline: 3px solid rgb(131, 218, 255);
+        box-shadow: 0 0 33px 11px white;
+    }
+
+    .LightBoxContent {
+        background-image: none;
+    }
+
+    .LightBox::backdrop {
+        background-color: rgba(0, 0, 0, 0.9);
+
+    }
+
+    .ImageFullSize {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+
+    .ThumbnailButton {
+        width: 110px;
+        height: 110px;
+    }
+
 }

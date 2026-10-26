@@ -2,33 +2,55 @@
     /* STYLE */
     /* ============================================================== */
 
-    /* #region   BODY  */
+
     body {
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-        height: 100dvh;
-        background-color: rgb(160, 139, 94);
+        min-height: 100vh;
+        background-image: url("./assets/img/bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-attachment: fixed;
+        flex: 1;
 
     }
 
-    /* #endregion */
     /* ------------------------------------------------------------- */
 
-
     /* #region   HEADER  */
-    header {
-        width: 100%;
-        height: 80px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 20px 140px;
-        gap: 10px;
-        background-color: rgb(56, 38, 21);
+    .MainHeader {
+        position: fixed;
+        top: 0;
+        left: 0;
 
+        background-image: url("./assets/img/header-plain.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 100%;
+        height: fit-content;
+
+        align-items: center;
+
+        /* padding-inline: 180px; */
+        padding: 20px 180px;
+        gap: 10px;
+
+        /* background-color: var(--color-sepia); */
+
+    }
+
+    .MainHeaderWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
     }
 
     .LogoIcon {
@@ -39,41 +61,48 @@
     }
 
     .LogoHeader {
-        width: 160px;
-        height: 40px;
-        background-color: rgb(160, 139, 94);
+        width: 50%;
+        height: 75%;
+
+
 
     }
 
     /* #endregion */
     /* ------------------------------------------------------------- */
 
-
     /* #region   MAIN  */
     main {
+
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        flex: 1;
-        height: 100dvh;
+        flex: 1 0 auto;
+        /* height: 100%; */
         width: 100%;
-        gap: 80px;
+        gap: 90px;
+        margin-top: 130px;
+        padding-inline: 120px;
+        /* padding-block: 120px; */
 
     }
 
     /* #region__________ H1 __________*/
     h1 {
         width: fit-content;
+        font-family: var(--primary-font);
+        font-size: 3rem;
+        text-shadow: 0 0 5px white;
     }
 
     /* #endregion */
     /* ------------------------------------------------------------- */
 
-
-    /* #region__________ THUMBNAIL GALLERY __________*/
+    /* #region THUMBNAIL GALLERY */
     .ThumbnailWrapper {
-        width: 1200px;
+        width: fit-content;
         height: fit-content;
         /* update later */
         display: flex;
@@ -81,19 +110,53 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
-        padding: 10px;
-        background-color: rgba(56, 38, 21, 0.5);
+        padding: 16px;
+        border-radius: 32px;
+        box-shadow: 0 0 33px 11px white;
+        border: 11px solid var(--color-sky-blue);
+        background-color: rgba(59, 91, 117, 0.7);
+        /* background-color: var(--color-prussian-blue); */
 
     }
 
     .ThumbnailButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         all: unset;
-        width: 150px;
-        height: 150px;
-        border: 2px solid rgba(160, 139, 94, 0.712);
+        width: 140px;
+        /* padding-block: 16px; */
+        /* margin-block: 16px; */
+        height: 140px;
+        /* border: 2px solid var(--color-prussian-blue); */
+        box-shadow: 0 0 5px black;
         border-radius: 16px;
         transition: all 222ms ease-in;
+        flex-shrink: 0 1;
+
+    }
+
+    .ThumbnailButton:hover {
+        /* border-color: rgba(236, 200, 122, 0.712); */
+        transition: all 222ms ease-in;
+        transform: scale(1.05);
+        /* border-radius: 20px; */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
+
+
+    }
+
+    .ThumbnailButton:focus {
+
+        /* all: unset; */
+
+        border: 4px solid rgb(0, 255, 234);
+        border-radius: 20px;
+        transition: all 111ms ease-in;
+        transform: scale(1.10);
+
+
 
     }
 
@@ -101,64 +164,55 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
+
         border-radius: 16px;
+        /* border: 4px solid rgba(160, 139, 94, 0.712); */
     }
 
-    .ThumbnailButton:hover {
-        border-color: rgba(236, 200, 122, 0.712);
-        transition: all 222ms ease-in;
-        transform: scale(1.05);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
-
+    .Thumbnail:focus {
+        /* border: 4px solid rgb(0, 255, 234); */
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        /* border-radius: 20px; */
+        transform: scale(1.1);
     }
+
 
     /* #endregion */
     /* ------------------------------------------------------------- */
 
     /* #endregion */
     /* ------------------------------------------------------------- */
-
-
-    /* ============================================================= */
-
 
     /* #region   FOOTER  */
-    footer {
+    .MainFooter {
         width: 100%;
-        height: 130px;
+        max-height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgb(56, 38, 21);
+        padding: 20px;
+        gap: 15px;
+        background-image: url("./assets/img/footer-plain.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex: 1 0 auto;
 
     }
-
 
     .LogoFooter {
-        width: 222px;
         height: 33px;
-        background-color: rgba(160, 139, 94, 0.712);
 
     }
-
-
-    .CopyrightWrapper {
-        width: 50%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        background-color: rgba(160, 139, 94, 0.555);
-
-    }
-
 
     .TextCopyright {
         height: 20px;
         flex-wrap: nowrap;
-        background-color: rgba(160, 139, 94, 0.555);
+        font-family: var(--primary-font);
+        color: white;
 
     }
 
@@ -167,94 +221,102 @@
 
     /* ============================================================== */
 
-    /* #region__________ MODAL LIGHTBOX __________*/
+    /* #region MODAL LIGHTBOX*/
+    .LightBox {
 
-    .LightBoxWrapper {
-        pointer-events: none;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+        background: unset;
+        border: unset;
     }
 
-    /* .LightBox {} */
+    .LightBox::backdrop {
+        background-color: rgba(0, 0, 0, 0.774);
+
+    }
 
     .LightBoxContent {
-        position: relative;
-        /* dialog { */
-        all: unset;
         display: flex;
-        position: fixed;
-        inset: 0;
-        margin: auto;
-
-
+        background-color: unset;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        width: 55%;
-        height: fit-content;
-        gap: 50px;
-
-        padding: 60px;
-
-        background-color: rgb(22, 13, 0);
+        width: 100%;
+        height: 100%;
+        background-image: url("./assets/img/dialog-frame-brown-plain.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
 
     }
 
-    /* propertys of Mainpage header active */
     .DialogHeader {
-        /* dialog header { */
-        display: flex;
-        justify-content: space-between;
-        height: 77px;
-        background-color: rgb(56, 38, 21);
-    }
+        position: relative;
+        width: 50%;
 
-    .TitleOfImage {
-        /* dialog h2 { */
-        color: rgb(175, 149, 111);
-        font-size: 2.2rem;
-        font-family: var(--primary-font);
-    }
-
-    .CloseButton {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
+        flex-direction: row;
+        height: 77px;
+
     }
 
-    .FullSizeImageArea {
-        /* dialog figure { */
-        display: flex;
 
+    .TitleOfImage {
+        color: rgb(175, 149, 111);
+        font-size: 2.2rem;
+        font-family: var(--primary-font);
+        text-align: center;
+    }
+
+    .CloseButton {
+        position: absolute;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: gray;
+
+    }
+
+    .CloseButtonIcon {
         width: 100%;
         height: 100%;
 
-        padding: 60px;
-        background-color: beige;
+    }
+
+    .FullSizeImageArea {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
     .ImageFullSize {
-        /* dialog img { */
-        width: 100%;
+        height: 50vh;
         background-color: rgba(160, 139, 94, 0.555);
-        ;
+        border: 4px solid black;
+
+
     }
 
     .DisplayNavigationWrapper {
-        /* dialog section { */
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 260px;
+        width: 15%;
         height: 60px;
-        background-color: rgb(56, 38, 21);
+        margin: 20px;
     }
 
     .NavigationButton {
-        /* dialog section button { */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -268,23 +330,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: 50px;
     }
 
-    /* propertys of Mainpage ptag active */
+
     .NavigationDisplay {
-        /* dialog p { */
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
         font-family: var(--primary-font);
-        color: rgb(175, 149, 111);
+        text-shadow: 0 0 5px white;
+        color: rgb(0, 0, 0);
     }
-
-
-
 
     /* #endregion */
     /* ------------------------------------------------------------- */
+
     /* #region     */
 
 

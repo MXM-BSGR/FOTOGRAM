@@ -1,0 +1,14 @@
+@media screen and (min-width:1441px) {
+    main {
+        max-width: 1440px;
+    }
+
+    /* .MainHeader {
+        max-width: 1440px;
+        justify-content: center;
+    } */
+
+    .MainFooter {
+        max-width: 1440px;
+    }
+}

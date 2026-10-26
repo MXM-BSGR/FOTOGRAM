@@ -3,42 +3,36 @@
     /* ============================================================== */
 
     :root {
-
         /* #region   COLORS  */
         --primary-color: black;
+        --color-ink-black: rgb(20, 19, 18);
+        --color-parchment: rgb(229, 217, 195);
+        --color-sepia: rgb(158, 128, 91);
+        --color-bone: rgb(199, 189, 168);
+        --color-prussian-blue: rgb(59, 91, 117);
+        --color-sky-blue: rgb(130, 167, 195);
+        --color-antique-ochre: rgb(191, 149, 64);
+        --color-rust-red: rgb(125, 46, 43);
+        --color-flesh-pink: rgb(212, 157, 148);
+        --color-moss-green: rgb(110, 122, 74);
 
         /* #endregion */
         /* ------------------------------------------------------------- */
 
         /* #region   FONTS  */
-        --primary-font: Arial, Helvetica, sans-serif;
-
+        --primary-font: 'Special Elite';
 
         /* #endregion */
         /* ------------------------------------------------------------- */
 
     }
 
-
-
-
-    /* #region     */
-
-
-
-    /* #endregion */
-    /* ------------------------------------------------------------- */
-
-
-
-
-
-
     /* ============================================================== */
 
-    /* #region     */
 
 
+
+    /* #region  BLANCO   */
 
     /* #endregion */
     /* ------------------------------------------------------------- */

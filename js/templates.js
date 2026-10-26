@@ -49,7 +49,7 @@ let imageDetailedDescription = [
 /* #region   TEMPLATE FUNCTIONS  */
 
 function getModalTemplate(title, altText, position, word, index) {
-    return `<div id="idLightBox${word}Content" class="LightBoxContent" data-index="${index} aria-labelledby="idDialogTitle">
+    return `<div id="idLightBox${word}Content" class="LightBoxContent" data-index="${index} aria-labelledby="idDialogTitle" onclick="event.stopPropagation()">
                 <header class="DialogHeader">
                     <h2 id="idDialogTitle" class="TitleOfImage">${title}</h2>
                     <button role="close_dialog" id="idCloseButton" class="CloseButton" type="button" onclick="closeDialog()" aria-label="close dialog">

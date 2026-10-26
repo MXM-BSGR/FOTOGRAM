@@ -237,10 +237,12 @@
         height: 100%;
         background: unset;
         border: unset;
+        pointer-events: none;
     }
 
     .LightBox::backdrop {
         background-color: rgba(0, 0, 0, 0.774);
+        pointer-events: auto;
 
     }
 
@@ -256,6 +258,7 @@
         background-size: 100% 900px;
         background-position: center;
         background-repeat: no-repeat;
+        /* pointer-events: auto; */
 
     }
 
@@ -269,7 +272,7 @@
         align-items: center;
         flex-direction: row;
         height: 77px;
-
+        pointer-events: auto;
     }
 
 
@@ -279,6 +282,7 @@
         font-size: 2.2rem;
         font-family: var(--primary-font);
         text-align: center;
+        pointer-events: auto;
     }
 
     .CloseButton {
@@ -292,11 +296,13 @@
         background-color: unset;
         border-style: none;
 
+
     }
 
     .CloseButton:hover {
 
         background-color: var(--color-sepia-transparent);
+        pointer-events: auto;
 
 
     }
@@ -307,7 +313,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-
+        pointer-events: auto;
         background-color: unset;
 
 
@@ -319,14 +325,14 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-
+        pointer-events: auto;
 
     }
 
     .CloseButtonIcon {
         width: 100%;
         height: 100%;
-
+        pointer-events: auto;
     }
 
     .FullSizeImageArea {
@@ -334,14 +340,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        pointer-events: auto;
     }
 
     .ImageFullSize {
         height: 490px;
         background-color: rgba(160, 139, 94, 0.555);
         border: 4px solid black;
-
+        pointer-events: auto;
 
     }
 
@@ -353,6 +359,7 @@
         width: 200px;
         height: 60px;
         margin: 20px;
+        pointer-events: auto;
     }
 
     .NavigationButton {
@@ -365,12 +372,12 @@
         border-style: none;
         cursor: pointer;
         background-color: unset;
-
+        pointer-events: auto;
     }
 
     .NavigationButton:hover {
 
-
+        pointer-events: auto;
         box-shadow: 0 0 10px 10px var(--color-sepia-transparent) inset;
 
     }
@@ -383,7 +390,7 @@
         background-size: contain;
         background-position: center;
         background-color: unset;
-
+        pointer-events: auto;
 
 
     }
@@ -395,7 +402,7 @@
         background-size: contain;
         background-position: center;
         box-shadow: unset;
-
+        pointer-events: auto;
 
     }
 
@@ -405,10 +412,12 @@
         align-items: center;
         width: 40px;
         height: 50px;
+        pointer-events: auto;
     }
 
     .left {
         left: 50px;
+        pointer-events: auto;
     }
 
 
@@ -419,6 +428,7 @@
         /* text-shadow: 0 0 5px white; */
         /* color: rgb(175, 149, 111); */
         color: var(--color-sepia);
+        pointer-events: auto;
     }
 
     /* #endregion */

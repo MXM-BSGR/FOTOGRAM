@@ -1,22 +1,22 @@
     /* ============================================================== */
+
     /* STYLE */
+
     /* ============================================================== */
 
 
     body {
-        margin: 0;
         display: flex;
-        flex-direction: column;
-        /* justify-content: space-between; */
-        align-items: center;
-        /* width: 100%; */
-        min-height: 100vh;
-        background-image: url("./assets/img/bg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-attachment: fixed;
         flex: 1;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-attachment: fixed;
+        background-image: url("./assets/img/bg.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
 
     }
 
@@ -24,47 +24,38 @@
 
     /* #region   HEADER  */
     .MainHeader {
+        display: flex;
         position: fixed;
-        top: 0;
-        left: 0;
-
+        align-items: center;
+        justify-content: center;
         background-image: url("./assets/img/header-plain.svg");
-        background-size: 100% 100px;
-        background-repeat: no-repeat;
         background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100% 100px;
+        padding: 20px 180px;
         width: 100vw;
         height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        /* padding-inline: 180px; */
-        padding: 20px 180px;
-
-
-        /* background-color: var(--color-sepia); */
 
     }
 
     .MainHeaderWrapper {
         display: flex;
-        justify-content: center;
+        gap: 10px;
         align-items: center;
+        justify-content: center;
         width: fit-content;
         height: fit-content;
-        gap: 10px;
-        /* overflow: visible; */
+
     }
 
     .LogoIcon {
-        width: 40px;
-        height: 40px;
         /* background-color: rgb(160, 139, 94); */
         background-image: url("./assets/img/close-btn-active-plain.svg");
-        background-size: 125%;
         background-position: center;
         background-repeat: no-repeat;
-        /* overflow: visible; */
+        background-size: 125%;
+        width: 40px;
+        height: 40px;
 
     }
 
@@ -75,137 +66,121 @@
     }
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* #region   MAIN  */
     main {
-
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         flex: 1 0 auto;
-        /* height: 100%; */
-        width: 100%;
-
+        flex-direction: column;
         gap: clamp(10px, -4.545px + 4.545vw, 50px);
-        /* margin-top: 130px; */
-        padding-inline: 120px;
-        /* padding-block: 140px; */
+        align-items: center;
+        justify-content: center;
         margin-top: 120px;
         margin-bottom: 50px;
+        padding-inline: 120px;
+        width: 100%;
 
     }
 
-    /* #region__________ H1 __________*/
+    /* #region__________ H1 __________ */
     h1 {
         width: fit-content;
+        text-shadow: 0 0 5px white;
         font-family: var(--primary-font);
         font-size: 3rem;
-        text-shadow: 0 0 5px white;
     }
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* #region THUMBNAIL GALLERY */
     .ThumbnailWrapper {
-        width: fit-content;
-        height: fit-content;
-        /* update later */
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         gap: 16px;
-        padding: 16px;
+        align-items: center;
+        justify-content: center;
+        border: 11px solid var(--color-sky-blue);
         border-radius: 32px;
         box-shadow: 0 0 33px 11px white;
-        border: 11px solid var(--color-sky-blue);
-        background-color: rgba(59, 91, 117, 0.7);
-        /* background-color: var(--color-prussian-blue); */
+        background-color: rgb(59 91 117 / 70%);
+        padding: 16px;
+        width: fit-content;
+        height: fit-content;
 
     }
 
     .ThumbnailButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         all: unset;
-        width: 140px;
-        /* padding-block: 16px; */
-        /* margin-block: 16px; */
-        height: 140px;
-        /* border: 2px solid var(--color-prussian-blue); */
-        box-shadow: 0 0 5px black;
-        border-radius: 16px;
-        transition: all 222ms ease-in;
+        display: flex;
         flex-shrink: 0 1;
+        align-items: center;
+        justify-content: center;
+        transition: all 222ms ease-in;
+        border-radius: 16px;
+        box-shadow: 0 0 5px black;
+        width: 140px;
+        height: 140px;
 
     }
 
     .ThumbnailButton:hover {
-        /* border-color: rgba(236, 200, 122, 0.712); */
-        transition: all 222ms ease-in;
         transform: scale(1.05);
-        /* border-radius: 20px; */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
-
+        transition: all 222ms ease-in;
+        box-shadow: 0 0 10px rgb(0 0 0 / 58.9%);
 
     }
 
     .ThumbnailButton:focus {
-
-        /* all: unset; */
-        border-radius: 20px;
-        transition: all 111ms ease-in;
         transform: scale(1.10);
-
-
+        transition: all 111ms ease-in;
+        border-radius: 20px;
 
     }
 
     .Thumbnail {
-        object-fit: cover;
+        border-radius: 16px;
         width: 100%;
         height: 100%;
+        object-fit: cover;
 
-        border-radius: 16px;
-        /* border: 4px solid rgba(160, 139, 94, 0.712); */
     }
 
     .Thumbnail:focus {
-        /* border: 4px solid rgb(0, 255, 234); */
-        object-fit: cover;
+        transform: scale(1.1);
         width: 100%;
         height: 100%;
-        /* border-radius: 20px; */
-        transform: scale(1.1);
+        object-fit: cover;
+
     }
 
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* #region   FOOTER  */
     .MainFooter {
-        width: 100%;
-        max-height: fit-content;
         display: flex;
+        flex: 1 0 auto;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
         gap: 15px;
+        align-items: center;
+        justify-content: center;
         background-image: url("./assets/img/footer-plain.svg");
-        background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        flex: 1 0 auto;
+        background-size: 100% 100%;
+        padding: 20px;
+        width: 100%;
+        max-height: fit-content;
 
     }
 
@@ -215,116 +190,111 @@
     }
 
     .TextCopyright {
-        height: 20px;
         flex-wrap: nowrap;
-        font-family: var(--primary-font);
+        height: 20px;
         color: white;
+        font-family: var(--primary-font);
 
     }
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* ============================================================== */
 
-    /* #region MODAL LIGHTBOX*/
+    /* #region MODAL LIGHTBOX */
     .LightBox {
-
+        border: unset;
+        background: unset;
+        width: 100%;
         max-width: 100%;
+        height: 100%;
         max-height: 100%;
         overflow: visible;
-        width: 100%;
-        height: 100%;
-        background: unset;
-        border: unset;
         pointer-events: none;
+
     }
 
     .LightBox::backdrop {
-        background-color: rgba(0, 0, 0, 0.774);
+        background-color: rgb(0 0 0 / 77.4%);
         pointer-events: auto;
 
     }
 
     .LightBoxContent {
         display: flex;
-        background-color: unset;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        justify-content: center;
+        background-color: unset;
         background-image: url("./assets/img/dialog-frame-brown-plain.svg");
-        background-size: 100% 900px;
         background-position: center;
         background-repeat: no-repeat;
-        /* pointer-events: auto; */
+        background-size: 100% 900px;
+        width: 100%;
+        height: 100%;
 
     }
 
     .DialogHeader {
+        display: flex;
         position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         width: 75%;
         max-width: 1050px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
         height: 77px;
         pointer-events: auto;
     }
 
 
     .TitleOfImage {
-        /* color: rgb(175, 149, 111); */
-        color: var(--color-sepia);
-        font-size: 2.2rem;
-        font-family: var(--primary-font);
         text-align: center;
+        color: var(--color-sepia);
+        font-family: var(--primary-font);
+        font-size: 2.2rem;
         pointer-events: auto;
+
     }
 
     .CloseButton {
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 0;
+        right: 0;
+        border-style: none;
+        border-radius: 50%;
+        background-color: unset;
         width: 60px;
         height: 60px;
         cursor: pointer;
-        border-radius: 50%;
-        background-color: unset;
-        border-style: none;
 
 
     }
 
     .CloseButton:hover {
-
         background-color: var(--color-sepia-transparent);
         pointer-events: auto;
-
 
     }
 
     .CloseButton:focus {
-
+        background-color: unset;
         background-image: url("./assets/img/close-btn-active-plain.svg");
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
         pointer-events: auto;
-        background-color: unset;
 
 
     }
 
     .CloseButton:active {
-
         background-image: url("./assets/img/close-btn-active-plain.svg");
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
         pointer-events: auto;
 
     }
@@ -338,15 +308,15 @@
     .FullSizeImageArea {
         all: unset;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         pointer-events: auto;
     }
 
     .ImageFullSize {
-        height: 490px;
-        background-color: rgba(160, 139, 94, 0.555);
         border: 4px solid black;
+        background-color: rgb(160 139 94 / 55.5%);
+        height: 490px;
         pointer-events: auto;
 
     }
@@ -354,84 +324,81 @@
     .DisplayNavigationWrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        margin: 20px;
         width: 200px;
         height: 60px;
-        margin: 20px;
         pointer-events: auto;
     }
 
     .NavigationButton {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        border-style: none;
+        border-radius: 50%;
+        background-color: unset;
         width: 50px;
         height: 50px;
-        border-radius: 50%;
-        border-style: none;
         cursor: pointer;
-        background-color: unset;
         pointer-events: auto;
     }
 
     .NavigationButton:hover {
-
-        pointer-events: auto;
         box-shadow: 0 0 10px 10px var(--color-sepia-transparent) inset;
+        pointer-events: auto;
 
     }
 
 
     .NavigationButton:focus {
-
+        background-color: unset;
         background-image: url("./assets/img/close-btn-active-plain.svg");
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
-        background-color: unset;
         pointer-events: auto;
-
 
     }
 
     .NavigationButton:active {
-
+        box-shadow: unset;
         background-image: url("./assets/img/close-btn-active-plain.svg");
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
-        box-shadow: unset;
         pointer-events: auto;
 
     }
 
     .arrow {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 40px;
         height: 50px;
         pointer-events: auto;
+
     }
 
     .left {
         left: 50px;
         pointer-events: auto;
+
     }
 
-
     .NavigationDisplay {
+        color: var(--color-sepia);
+        font-family: var(--primary-font);
         font-size: 1.5rem;
         font-weight: bold;
-        font-family: var(--primary-font);
-        /* text-shadow: 0 0 5px white; */
-        /* color: rgb(175, 149, 111); */
-        color: var(--color-sepia);
         pointer-events: auto;
+
     }
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */
 
     /* #region     */
@@ -439,4 +406,5 @@
 
 
     /* #endregion */
+
     /* ------------------------------------------------------------- */

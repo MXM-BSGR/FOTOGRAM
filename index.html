@@ -1,63 +1,59 @@
 <!DOCTYPE html>
-<html lang="de"> <!-- update later -->
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title> <!-- update later -->
-
     <!-- #region  LINKS  -->
-
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./css/media-querries.css">
-
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
     <!-- #region  SCRIPT  -->
     <script defer src="./js/templates.js"></script>
     <script defer src="./script.js"></script>
-
     <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
 </head>
 
 <body onload="init()">
+    <!--__________  HEADER  __________-->
+    <header class="MainHeader">
 
-    <!-- #region__________  HEADER  __________-->
-    <header>
-        <img id="idHeaderLogoIcon" class="LogoIcon" src="./assets/icons/" alt="logo"> <!-- update later -->
-        <img id="idHeaderLogo" class="LogoHeader" src="./assets/img/" alt="schriftzug"> <!-- update later -->
+        <div id="idMainHeaderWrapper" class="MainHeaderWrapper">
+            <!-- <img id="idHeaderLogoIcon" class="LogoIcon" src="./assets/icons/" alt="logoIcon"> update later -->
+            <img id="idHeaderLogo" class="LogoHeader" src="./assets/img/splashcore-logo.svg" alt="lettering">
+        </div>
 
     </header>
 
-    <!-- #endregion -->
     <!-- ------------------------------------------------------------- -->
 
-    <!-- #region__________  MAIN   __________-->
+    <!-- __________  MAIN   __________-->
     <main id="idMainContent">
+
         <h1 id="idHeading" class="WebsiteHeading">My favorite Paintings by Pierromaniac</h1>
         <section id="idThumbnailWrapper" class="ThumbnailWrapper"></section>
-        <dialog id="idLightBox" class="LightBox"></dialog>
+        <dialog id="idLightBox" class="LightBox" aria-labeledby="idDialogTitle"
+            aria-describedby="idDetailedDescription"></dialog>
 
     </main>
-    <!-- #endregion -->
 
     <!-- ------------------------------------------------------------- -->
 
-    <!-- #region__________  FOOTER  __________-->
-    <footer>
-        <img id="idFooterLogo" class="LogoFooter" src="./assets/img/" alt="schriftzug"> <!-- update later -->
-        <section id="idCopyrightWrapper" class="CopyrightWrapper">
-            <img id="idCopyrightIcon" class="CopyrightIcon" src="./assets/icons/" alt="Copyright Icon">
-            <!-- update later -->
-            <p id="idCopyrightText" class="TextCopyright">2026 SplashCore by Pierromaniac</p>
-        </section>
+    <!-- __________  FOOTER  __________-->
+    <footer class="MainFooter">
+
+        <img id="idFooterLogo" class="LogoFooter" src="./assets/img/splashcore-logo.svg" alt="banner">
+
+        <p id="idCopyrightText" class="TextCopyright">&copy; 2026 SplashCore by Pierromaniac</p>
     </footer>
 
-    <!-- #endregion -->
+
     <!-- ------------------------------------------------------------- -->
 
 </body>
